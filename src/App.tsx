@@ -1,24 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Basic from './components/props/Basic';
+import Advance from './components/props/Advance';
+import Events from './components/props/Events';
+import Child from './components/props/Child';
+import Styles from './components/props/Styles';
+
+const obj = [
+  {
+    name: 'John',
+    age: 30
+  },
+  {
+    name: 'Jane',
+    age: 20
+  }
+]
 
 function App() {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
+    console.log(e.target.value)
+  }
+
+  const handleClick = () => console.log("clicked")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Basic values="Props Typescript"/>
+      <Advance values={obj}/>
+      <Events value="" handleChange={handleChange}
+              handleClick={handleClick}/>
+      <Child>
+        <h1>Children Component</h1>
+      </Child>
+      <Styles style={{backgroundColor:"#3498db",
+                      color:"#333333",
+                      padding:"20px",
+                      borderRadius:"10px"}}/>
     </div>
   );
 }
