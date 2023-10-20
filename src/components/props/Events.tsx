@@ -1,7 +1,8 @@
 import React from 'react'
+import { Change } from './Event.types'
 type handleChangeProps = {
     value: string,
-    handleChange: (e:React.ChangeEvent<HTMLInputElement>) => void,
+    handleChange: (e:Change) => void,
     handleClick: () => void
 }
 

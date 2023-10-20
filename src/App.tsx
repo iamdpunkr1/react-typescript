@@ -5,6 +5,8 @@ import Advance from './components/props/Advance';
 import Events from './components/props/Events';
 import Child from './components/props/Child';
 import Styles from './components/props/Styles';
+import { Change } from './components/props/Event.types';
+import Counter from './states/Counter';
 
 const obj = [
   {
@@ -19,7 +21,7 @@ const obj = [
 
 function App() {
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
+  const handleChange = (e: Change) =>{
     console.log(e.target.value)
   }
 
@@ -38,6 +40,7 @@ function App() {
                       color:"#333333",
                       padding:"20px",
                       borderRadius:"10px"}}/>
+      <Counter/>
     </div>
   );
 }
