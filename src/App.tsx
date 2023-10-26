@@ -8,6 +8,7 @@ import Styles from './components/props/Styles';
 import { Change } from './components/props/Event.types';
 import Counter from './states/Counter';
 import List from './states/List';
+import Restrict from './states/Restrict';
 
 const obj = [
   {
@@ -41,12 +42,13 @@ function App() {
                       color:"#333333",
                       padding:"20px",
                       borderRadius:"10px"}}/>
-                            <Counter/>
-                            <List list={[1,2,3,4]}/>
-                            <List list={["1","2","3","4"]}/>
-      
-                          </div>
-                        );
-                      }
-                      export default App;
+      <Counter/>
+      <List list={[1,2,3,4]}/>
+      <List list={["1","2","3","4"]}/>
+      <Restrict value={10} isPositive/>
+     </div>
+     )
+     }
+
+  export default App;
 
