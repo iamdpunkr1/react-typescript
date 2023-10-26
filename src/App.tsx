@@ -7,6 +7,7 @@ import Child from './components/props/Child';
 import Styles from './components/props/Styles';
 import { Change } from './components/props/Event.types';
 import Counter from './states/Counter';
+import List from './states/List';
 
 const obj = [
   {
@@ -40,9 +41,12 @@ function App() {
                       color:"#333333",
                       padding:"20px",
                       borderRadius:"10px"}}/>
-      <Counter/>
-    </div>
-  );
-}
+                            <Counter/>
+                            <List list={[1,2,3,4]}/>
+                            <List list={["1","2","3","4"]}/>
+      
+                          </div>
+                        );
+                      }
+                      export default App;
 
-export default App;
