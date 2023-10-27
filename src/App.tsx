@@ -9,6 +9,7 @@ import { Change } from './components/props/Event.types';
 import Counter from './states/Counter';
 import List from './states/List';
 import Restrict from './states/Restrict';
+import Template from './components/Template';
 
 const obj = [
   {
@@ -46,6 +47,7 @@ function App() {
       <List list={[1,2,3,4]}/>
       <List list={["1","2","3","4"]}/>
       <Restrict value={10} isPositive/>
+      <Template position="center"/>
      </div>
      )
      }
