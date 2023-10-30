@@ -11,6 +11,7 @@ import List from './states/List';
 import Restrict from './states/Restrict';
 import Template from './components/Template';
 import McqForm from './components/McqForm';
+import Question from './components/Question';
 
 const obj = [
   {
@@ -50,6 +51,7 @@ function App() {
       <Restrict value={10} isPositive/>
       <Template position="center"/> */}
       <McqForm/>
+      <Question/>
      </div>
      )
      }
