@@ -10,7 +10,17 @@ type QuestionT = {
 
 function Question() {
     const {questions} = useRecoilValue(mcqSelector)
-  return (
+    const [toggle, setToggle] = React.useState(false)
+    const [answerVisibility, setAnswerVisibility] = React.useState(
+        new Array(questions.length).fill(false)
+      );
+    
+      const toggleAnswer = (index: number) => {
+        const newAnswerVisibility = [...answerVisibility];
+        newAnswerVisibility[index] = !newAnswerVisibility[index];
+        setAnswerVisibility(newAnswerVisibility);
+      }  
+return (
     <div className='box'>
     <h2>MCQ Questions</h2>
     {questions[0].question.length === 0 ? <p>No Questions Added!</p>:
@@ -23,8 +33,13 @@ function Question() {
             <li key={oindex}>{option}</li>
           ))}
         </ol>
-        <p>{`Answer: ${question.answer}`}</p>
-        
+        {answerVisibility[index] && <p>{`Answer: ${question.answer}`}</p>}
+        <button
+              className="answer"
+              onClick={() => toggleAnswer(index)}
+            >
+              {answerVisibility[index] ? "Hide Answer" : "Show Answer"}
+        </button>
       </div>
     ))}
   </div>

@@ -35,7 +35,7 @@ text-decoration: underline;
 }
 
 /* Style for the Add Question button */
-.add-question {
+.add-question, .answer {
   background-color: #4CAF50;
   color: #fff;
   border: none;
@@ -46,7 +46,7 @@ text-decoration: underline;
   border-radius:5px;
 }
 
-.add-question:hover {
+.add-question, .answer:hover {
   background-color: #45a049;
 }
 
