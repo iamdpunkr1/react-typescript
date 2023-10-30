@@ -10,6 +10,7 @@ import Counter from './states/Counter';
 import List from './states/List';
 import Restrict from './states/Restrict';
 import Template from './components/Template';
+import McqForm from './components/McqForm';
 
 const obj = [
   {
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <Basic values="Props Typescript"/>
+      {/* <Basic values="Props Typescript"/>
       <Advance values={obj}/>
       <Events value="" handleChange={handleChange}
               handleClick={handleClick}/>
@@ -47,7 +48,8 @@ function App() {
       <List list={[1,2,3,4]}/>
       <List list={["1","2","3","4"]}/>
       <Restrict value={10} isPositive/>
-      <Template position="center"/>
+      <Template position="center"/> */}
+      <McqForm/>
      </div>
      )
      }

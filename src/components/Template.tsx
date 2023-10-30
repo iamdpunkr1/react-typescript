@@ -1,4 +1,3 @@
-import { type } from 'os'
 import React from 'react'
 type horizontalProps = "left" | "center" | "right"
 type verticalProps = "top" | "center" | "bottom"

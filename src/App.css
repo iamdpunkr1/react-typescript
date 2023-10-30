@@ -7,3 +7,50 @@
 }
 
 
+/* Style for the Add Question button */
+.add-question {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius:5px;
+}
+
+.add-question:hover {
+  background-color: #45a049;
+}
+
+/* Style for the Add Option button */
+.add-option{
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius:5px;
+}
+
+.add-option:hover {
+  background-color: #0079A1;
+}
+
+/* Style for the Delete Option button */
+.delete-option {
+  background-color: #FF5733;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius:5px;
+}
+
+.delete-option:hover {
+  background-color: #E74C3C;
+}
